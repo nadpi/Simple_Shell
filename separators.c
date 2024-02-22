@@ -29,7 +29,7 @@ bool separator(char *input)
 			env();
 			continue;
 		}
-		if ((findandexec(arg[0], "/usr/bin/", arg, 0)) == 0)
+		if ((findandexec(arg[0], "/usr/bin/", arg, 0)) == 2)
 			continue;
 		else
 		{
