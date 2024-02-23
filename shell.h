@@ -8,6 +8,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <ctype.h>
 extern char **environ;
 int cmp(char *s1, char *s2);
 int findandexec(char *, char *, char **, int);
