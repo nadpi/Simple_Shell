@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * _exit - handle the exit command
+ * exity - handle the exit command
  * @arg: command
  * Return: nothing
  */
