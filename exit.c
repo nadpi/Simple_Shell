@@ -14,14 +14,14 @@ void exity(char **arg)
 			{
 				if (atoi(arg[1]) < 0)
 				{
-					fprintf(stderr, "exit: Illegal number: %s\n", arg[1]);
+					fprintf(stderr, "./hsh: 1: exit: Illegal number: %s\n", arg[1]);
 					exit(2);
 				}
 				exit(atoi(arg[1]));
 			}
 			else
 			{
-				fprintf(stderr, "exit: Illegal number: %s\n", arg[1]);
+				fprintf(stderr, "./hsh: 1: exit: Illegal number: %s\n", arg[1]);
 				exit(2);
 			}
 		}
