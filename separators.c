@@ -22,8 +22,8 @@ bool separator(char *input)
 		tokenize(command, arg, " \n");
 		if (arg[0] == NULL || _strcmp(arg[0], "") == 0)
 			continue;
-		if (_strcmp(arg[0], "exit") == 0)
-			return (true);
+		if (strstr(arg[0], "exit") != NULL)
+			exity(arg);
 		if (_strcmp(arg[0], "env") == 0)
 		{
 			env();
