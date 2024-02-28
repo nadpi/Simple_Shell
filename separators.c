@@ -7,7 +7,7 @@
 bool separator(char *input)
 {
 	char *token, *sep_delimiter = ";", *command;
-	int i, token_count = 0, command_failed;
+	int i, token_count = 0, command_failed = 0;
 	char *commands[256], *arg[256];
 
 	token = strtok(input, sep_delimiter);
@@ -31,13 +31,13 @@ bool separator(char *input)
 		}
 		if ((findandexec(arg[0], "/usr/bin/", arg, 0)) == 2)
 		{
-			command_failed = 0;
+			command_failed = 2;
 			continue;
 		}
 		else
 		{
 			pid_t pid = fork();
-			command_failed = 2;
+			command_failed = 0;
 		if (pid == -1)
 		{
 			perror("fork");
