@@ -2,10 +2,9 @@
 /**
  * exity - handle the exit command
  * @arg: command
- * @command_fail: if prev command failed or not
  * Return: nothing
  */
-void exity(char **arg, int command_fail)
+void exity(char **arg)
 {
 	if (_strcmp(arg[0], "exit") == 0)
 	{
@@ -28,7 +27,7 @@ void exity(char **arg, int command_fail)
 		}
 		else
 		{
-			exit(command_fail);
+			exit(EXIT_SUCCESS);
 		}
 	}
 }
