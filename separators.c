@@ -31,13 +31,13 @@ bool separator(char *input)
 		}
 		if ((findandexec(arg[0], "/usr/bin/", arg, 0)) == 2)
 		{
-			command_failed = 2;
+			command_failed = 0;
 			continue;
 		}
 		else
 		{
 			pid_t pid = fork();
-			command_failed = 0;
+			command_failed = 2;
 		if (pid == -1)
 		{
 			perror("fork");
