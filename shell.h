@@ -22,6 +22,6 @@ char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 char *_strcat(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
-void exity(char **arg);
+void exity(char **arg, int command_fail);
 void echoy(void);
 #endif
