@@ -27,7 +27,6 @@ int findandexec(char *command, char *path, char **arg, int option)
 		cleanpath = malloc(_strlen(path) + _strlen(command) + 2);
 	if (cleanpath == NULL)
 	{
-		free(cleanpath);
 		perror("malloc");
 		exit(1);
 	}
@@ -38,6 +37,8 @@ int findandexec(char *command, char *path, char **arg, int option)
 		if (option == 1)
 		{
 		execve(cleanpath, arg, NULL);
+		perror(cleanpath);
+		free(cleanpath);
 		exit(2);
 		}
 		flag = 1;
@@ -46,9 +47,8 @@ int findandexec(char *command, char *path, char **arg, int option)
 	{
 		fprintf(stderr, "./hsh: 1: %s: not found\n", command);
 		flag = 2;
-		free(cleanpath);
 	}
-		free(cleanpath);
+	free(cleanpath);
 	}
 	return (flag);
 }

@@ -12,7 +12,6 @@ char *comments(char *input)
 	 comString = malloc(_strlen(input) + 1);
 	if (comString == NULL)
 	{
-		free(comString);
 		perror("malloc");
 		exit(1);
 	}
