@@ -30,7 +30,7 @@ bool separator(char *input)
 			continue;
 		}
 		if ((findandexec(arg[0], "/usr/bin/", arg, 0)) == 2)
-			exit(127);
+			continue;
 		else
 		{
 			pid_t pid = fork();
