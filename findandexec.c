@@ -37,8 +37,6 @@ int findandexec(char *command, char *path, char **arg, int option)
 		if (option == 1)
 		{
 		execve(cleanpath, arg, NULL);
-		perror(cleanpath);
-		free(cleanpath);
 		exit(2);
 		}
 		flag = 1;
